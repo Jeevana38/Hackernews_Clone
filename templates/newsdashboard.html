@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+</head>
+<body>
+
+    {% if login %}
+        <p>Hello! <a href="/logout">Logout</a></p>
+    {% else %}
+        <p>You are not logged in. <a href="/login">Login</a></p>
+    {% endif %}
+
+    <h2>Articles</h2>
+
+    {% for article in articles %}
+        <div>
+
+            <h3>URL: <a href="{{ article[2] }}" target="_blank">{{ article[1] }}</a></h3>
+            <p>NewsURL: {{ article[3] }}</p>
+            <p>Posted on: {{ article[5]}}</p>
+            <p>Upvotes: {{ article[6] }}</p>
+            <p>Comments : {{article[7]}}</p>
+
+           <a href="{{ url_for('mark_as_read', article_id=article[0]) }}"><button>Mark as Read</button></a>
+            <a href="{{ url_for('delete', article_id=article[0]) }}"><button>Delete</button></a>
+        </div>
+
+    {% endfor %}
+
+
+</body>
+</html>
