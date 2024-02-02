@@ -8,19 +8,19 @@ Developed a clone of the hacker news application
 -> the articles are displayed in descending order of the time - handled in SQL
 
 Tech Stack:
-Framework: Flask
-Language: Python
-Database: MYSQL
-software: Apache server, phpmyadmin - to create a database 
-web scraper : BeautifulSoup4
+Framework: Flask;
+Language: Python;
+Database: MYSQL;
+software: Apache server, phpmyadmin - to create a database ;
+web scraper : BeautifulSoup4;
 frontend: HTML (login.html, register.html, newsdashboard.html) , Bootstrap
 
 Requirements:
 -> After creating a virtual env in pycharm, I have installed the following packages
-pip install -U flask
-pip install beautifulsoup4
-pip install mysql-connector-python
-pip install requests
+pip install -U flask;
+pip install beautifulsoup4;
+pip install mysql-connector-python;
+pip install requests;
 
 Databases:
 1. Articles
